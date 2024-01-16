@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <style>
+        table {
+            min-width: 700px;
+            max-width: 900px;
+        }
+
+        th {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- il tag table ci delimita l'area di una tabella -->
+    <table>
+        <!-- per ogni riga servirà un elemento tr (table row) -->
+        <tr>
+            <!-- intestazione è table heading th -->
+            <th>Nome</th>
+            <th>Cognome</th>
+            <th>Età</th>
+            <th>Tel</th>
+            <th>Indirizzo</th>
+        </tr>
+
+        <!-- nuova riga -->
+        <tr>
+            <!-- le celle della tabella con i dati - table datacell -->
+            <td>Stefano</td>
+            <td>Miceli</td>
+            <td>30</td>
+            <td>123981239812</td>
+            <td>via delle rose 45</td>
+        </tr>
+        <tr>
+            <!-- le celle della tabella con i dati - table datacell -->
+            <td>Mario</td>
+            <td>Miceli</td>
+            <td>68</td>
+            <td></td>
+            <td>via dei cigni 82</td>
+        </tr>
+        <tr>
+            <!-- le celle della tabella con i dati - table datacell -->
+            <td>Rosario</td>
+            <td>Miceli</td>
+            <!-- colspan serve a aumentare il numero di colonne occupate per un particolare td -->
+            <td colspan="2">68</td>
+            <td>via dei cigni 82</td>
+        </tr>
+    </table>
+
+    <!-- attenzione agli attributi utilizzati (ad esclusione di colspan e rowspan) gli altri  come border, cellPadding, cellSpacing, ecc.. sono da considerarsi obsoleti -->
+    <table border="1" cellPadding="20" cellSpasing="10">
+        <caption>La nostra tabella</caption>
+        <!-- thead>tr>th*3{testo$} -->
+        <thead>
+            <tr>
+                <th colspan="5" style="background-color: coral;">intestazione</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="3">Categoria</td>
+                <td>elemento</td>
+                <td>elemento</td>
+                <td>elemento</td>
+                <td>elemento</td>
+            </tr>
+            <tr>
+                <td>elemento</td>
+                <td>elemento</td>
+                <td>elemento</td>
+                <td>elemento</td>
+            </tr>
+            <tr>
+                <td>elemento</td>
+                <td>elemento</td>
+                <td>elemento</td>
+                <td>elemento</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5">IFOA by EPICODE</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

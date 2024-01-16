@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        form {
+            width: 400px;
+            margin-inline: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- gli attributi action e method servono ad inviare i dati raccolti dai campi del form secondo modalità precise -->
+    <!-- <form action="file.php" method="POST"></form> -->
+    <form>
+
+
+        <label for="name">Nome</label>
+        <!-- il campo input è autoconclusivo, non deve avere un tag di chiusura, perché non avrà mai figli e nemmeno del testo -->
+        <!-- placeholder serve ad impostare un testo iniziale, che sparirà nel momento in cui l'utente comincerà a scriverci dentro -->
+
+        <!-- l'attributo required fa sì che il campo debba per forza essere compilato correttamente per poter inviare il form -->
+        <div><input type="text" id="name" placeholder="Inserisci il tuo nome" required></div>
+
+        <br>
+        <label for="surname">Cognome</label>
+        <br>
+        <!-- il campo input è autoconclusivo, non deve avere un tag di chiusura, perché non avrà mai figli e nemmeno del testo -->
+        <!-- placeholder serve ad impostare un testo iniziale, che sparirà nel momento in cui l'utente comincerà a scriverci dentro -->
+        <input type="text" id="surname" placeholder="Inserisci il tuo cognome" required>
+
+        <br>
+        <br>
+        <!-- raggruppamento di elementi con legenda e bordo  -->
+        <fieldset>
+            <legend>Sito Web</legend>
+            <label for="website">URL</label>
+            <input type="url" id="website" placeholder="https://www.....">
+        </fieldset>
+
+
+        <!-- nel caso dei radio button è importante che ogni input abbia lo stesso name, altrimenti il comportamento di selezione esclusiva non sarà funzionante -->
+        <fieldset>
+            <legend>Fumatori</legend>
+            <label for="smoking">sì</label>
+            <input type="radio" name="smoking-btn" id="smoking">
+            <label for="no-smoking">no</label>
+            <input type="radio" name="smoking-btn" id="no-smoking">
+            <label for="maybe-smoking">forse</label>
+            <input type="radio" name="smoking-btn" id="maybe-smoking">
+        </fieldset>
+
+        <br>
+
+        <label for="location">Regione</label>
+        <select id="location">
+            <!-- tramite l'attributo "value" possiamo apportare una trasformazione del valore testuale contenuto nella option, 
+            trasformandolo nel valore contenuto nell'attributo "value" -->
+            <option value="">Seleziona un'opzione</option>
+            <optgroup label="Nord">
+                <option value="VE">Veneto</option>
+                <option value="FVG">Friuli Venezia Giulia</option>
+
+                <!-- in questo caso il valore di ritorno sarà pombardia con la p minuscola -->
+                <option value="piemonte">Piemonte</option>
+
+                <!-- in questo caso il valore di ritorno sarà Lombardia con la L maiuscola -->
+                <option>Lombardia</option>
+            </optgroup>
+            <optgroup label="Centro">
+                <option>Umbria</option>
+                <option>Toscana</option>
+                <option>Lazio</option>
+            </optgroup>
+            <optgroup label="Sud">
+                <option>Calabria</option>
+                <option>Sicilia</option>
+                <option>Puglia</option>
+            </optgroup>
+        </select>
+
+
+        <hr>
+        <input type="checkbox" id="webcam">
+        <label for="webcam">Webcam presente</label>
+        <br>
+        <input type="checkbox" id="motorized">
+        <label for="motorized">Automunito</label>
+        <hr>
+
+        <label for="bio">Biografia</label>
+        <br>
+
+        <!-- cols si traduce in una larghezza -->
+        <!-- rows si traduce in altezza -->
+        <textarea id="bio" placeholder="parlaci di te..." cols="51" rows="16" maxlength="140"></textarea>
+
+        <br>
+
+        <!-- il type button rende il bottone inerte per quanto riguarda l'invio del form -->
+        <!-- l'invio vero e proprio viene effettuato da un bottone o input di tipo "submit" -->
+
+        <!-- il type button crea un bottone che non invia il form se premuto -->
+        <button type="button">bottone inerte</button>
+        <!-- il type reset resetterà i campi -->
+        <button type="reset">reset dei campi</button>
+
+        <!-- questi due button sono sostanzialmente equivalenti, il tag button è però più moderno -->
+        <input type="submit" value="invia il dato">
+        <button type="submit">Invia dati</button>
+    </form>
+
+</body>
+
+</html>

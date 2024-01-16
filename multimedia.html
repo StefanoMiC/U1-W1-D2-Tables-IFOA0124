@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- AUDIO -->
+    <!-- file singolo  -->
+    <!-- <audio src="./assets/webinar.mp3" controls autoplay loop></audio> -->
+
+    <!-- <audio>
+        
+        <source src="./webinar.mp3" type="audio/mpeg">
+        <source src="./webinar.ogg" type="audio/ogg">
+
+        Attenzione il tuo browser non supporta i file audio forniti
+        testo mostrato in caso in cui il browser non sia in grado di riprodurli 
+    </audio> -->
+
+
+    <!-- VIDEO -->
+
+    <video src="./assets/video/file_example_OGG_1920_13_3mg.ogg" controls width="480"
+        poster="./assets/imgs/earth-hi.jpg"></video>
+
+
+    <video src="./assets/video/file_example_OGG_480_1_7mg.ogg" controls width="480"
+        poster="./assets/imgs/earth-hi.jpg"></video>
+
+
+    <!-- in questo caso il tag picture si occupa di gestire l'immagine più appropriata per la dimensione corrente di schermo -->
+
+    <!-- sotto ai 700px caricherà l'immagine piccola (sm), 
+        dai 700 ai 1199 caricherà la media (md), 
+        sopra ai 1200px caricherà quella grande (hi) -->
+    <picture>
+        <source media="(min-width: 1200px)" srcset="./assets/imgs/earth-hi.jpg">
+        <source media="(min-width: 700px)" srcset="./assets/imgs/earth-md.jpg">
+        <img src="./assets/imgs/earth-sm.jpg" alt="earth from space">
+    </picture>
+</body>
+
+</html>
